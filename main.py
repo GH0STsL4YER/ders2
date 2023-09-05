@@ -18,14 +18,26 @@ s1=Song("Trapp queen", 2017, "pop")
 s2=Song("bir sonraki haytima gel", 2020, "pop")
 s3=Song("Tacata", 2023, "brazilien phonk")      
 s1.show_info()
-
-class Likes():
+s2.show_info()
+s3.show_info()
+print("-------------------------------")
+class Views():
     "bu sinif en cok like alan sarkilari onerir"
-    def __init__(self, likes, name, artist):
-        self.likes = likes
+    def __init__(self, views, name, artist):
+        self.views = views
         self.name = name
         self.artist = artist
 
-class List(Likes):
-    def __init__(self, likes, name, artist):
-        super().__init__(likes, name, artist)
+    def show_info(self):
+        print(self.views, self.name, self.artist)
+
+class List(Views):
+    def __init__(self, views, name, artist):
+        super().__init__(views, name, artist)
+
+Top1 = List( "8.1billion", "Despacito", "Luis Fonsi ft. Daddy Yankee" )
+Top2 = List(  "5.9billion", "Shape of You", "Ed Sheeran")
+Top3 = List(  "4.8billion", "Uptown Funk", "Mark Ronson ft. Bruno Mars")
+Top1.show_info()
+Top2.show_info()
+Top3.show_info()
